@@ -4,66 +4,81 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, Shield, Zap, BarChart } from 'lucide-react'
 import ExchangeRateChart from './components/exchange-rate-chart'
-import TestImg from './images/guide-rail.png'
 
 export default function Home() {
+
+  const cards = [
+    {
+      title: "Guide Rails",
+      description: "Precision-engineered for smooth operation",
+      image: { src: "/images/g.png", width: 250, height: 200, alt: "Guide Rails" },
+      link: "/products/guide-rails",
+    },
+    {
+      title: "Elevator Machines",
+      description: "Powerful and efficient elevator motors",
+      image: { src: "/images/2.png", width: 250, height: 200, alt: "Elevator Machines" },
+      link: "/products/machines",
+    },
+    {
+      title: "Control Chips",
+      description: "Advanced technology for smart elevators",
+      image: { src: "/images/guide-rail.png", width: 250, height: 200, alt: "Control Chips" },
+      link: "/products/chips",
+    },
+  ];
+
   return (
     <div className="gradient-bg min-h-screen">
       {/* Hero Section */}
-      <section className="container mx-auto px-6 py-16 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4">Elevating Your Elevator Solutions</h1>
-        <p className="text-xl mb-8">Premium elevator components for seamless vertical transportation</p>
-        <Button asChild>
-          <Link href="/products">Explore Our Products <ArrowRight className="ml-2" /></Link>
-        </Button>
+      <section className="relative h-[650px] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/images/3.png"
+          alt="Elevator Background"
+          fill
+          style={{ objectFit: 'fill' }}
+          quality={100}
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50" style={{ backdropFilter: "blur(3  px)" }}></div>
+        <div className="relative z-10 text-center text-white">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">Elevating Your Elevator Solutions</h1>
+          <p className="text-xl mb-8">Premium elevator components for seamless vertical transportation</p>
+          <Button asChild>
+            <Link href="/products" className="bg-white text-black hover:bg-gray-200">
+              Explore Our Products <ArrowRight className="ml-2" />
+            </Link>
+          </Button>
+        </div>
       </section>
 
       {/* Featured Products */}
       <section className="container mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Featured Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card>
-            <CardHeader>
-              <CardTitle>Guide Rails</CardTitle>
-              <CardDescription>Precision-engineered for smooth operation</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Image src="/images/guide-rail.png" width={300} height={200} alt="Guide Rails" className="rounded-lg" />
-            </CardContent>
-            <CardFooter>
-              <Button asChild>
-                <Link href="/products/guide-rails">Learn More</Link>
-              </Button>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Elevator Machines</CardTitle>
-              <CardDescription>Powerful and efficient elevator motors</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Image src="/images/guide-rail.png" width={300} height={200} alt="Elevator Machines" className="rounded-lg" />
-            </CardContent>
-            <CardFooter>
-              <Button asChild>
-                <Link href="/products/machines">Learn More</Link>
-              </Button>
-            </CardFooter>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Control Chips</CardTitle>
-              <CardDescription>Advanced technology for smart elevators</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Image src="/images/guide-rail.png" width={300} height={200} alt="Control Chips" className="rounded-lg" />
-            </CardContent>
-            <CardFooter>
-              <Button asChild>
-                <Link href="/products/chips">Learn More</Link>
-              </Button>
-            </CardFooter>
-          </Card>
+
+          {cards.map((card, index) => (
+            <Card key={index}>
+              <CardHeader>
+                <CardTitle>{card.title}</CardTitle>
+                <CardDescription>{card.description}</CardDescription>
+              </CardHeader>
+              <CardContent className="justify-items-center">
+                <Image
+                  src={card.image.src}
+                  width={card.image.width}
+                  height={card.image.height}
+                  alt={card.image.alt}
+                  className="rounded-lg w-80 h-72"
+                />
+              </CardContent>
+              <CardFooter>
+                <Button asChild>
+                  <Link href={card.link}>Learn More</Link>
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
         </div>
       </section>
 
