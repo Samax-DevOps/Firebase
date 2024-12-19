@@ -11,12 +11,12 @@ export default function Header() {
             <Elevator className="w-8 h-8 mr-2" />
             <span className="text-xl font-bold">Samax Engineering</span>
           </Link>
-          <div className="hidden md:flex items-center space-x-4">
-            <Link href="/" className="text-gray-800 hover:text-gray-700">Home</Link>
-            <Link href="/products" className="text-gray-800 hover:text-gray-700">Products</Link>
-            <Link href="/about" className="text-gray-800 hover:text-gray-700">About</Link>
-            <Link href="/contact" className="text-gray-800 hover:text-gray-700">Contact</Link>
-            <Link href="/support" className="text-gray-800 hover:text-gray-700">Support</Link>
+          <div className="hidden md:flex items-center space-x-4 font-semibold">
+            <Link href="/" className="text-gray-800 hover:text-gray-400">Home</Link>
+            <Link href="/products" className="text-gray-800 hover:text-gray-400">Products</Link>
+            <Link href="/about" className="text-gray-800 hover:text-gray-400">About</Link>
+            <Link href="/contact" className="text-gray-800 hover:text-gray-400">Contact</Link>
+            <Link href="/support" className="text-gray-800 hover:text-gray-400">Support</Link>
           </div>
         </div>
       </nav>

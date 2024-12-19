@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 231, 229, 228 ;
   --background-end-rgb: 255, 255, 255;
   --background: 0 0% 100%;
   --foreground: 222.2 47.4% 11.2%;
@@ -26,6 +26,8 @@
   --destructive-foreground: 210 40% 98%;
   --ring: 215 20.2% 65.1%;
   --radius: 0.5rem;
+  --sam: #f0d7ba ;
+  --buttonf: #af7f31;
 }
 
 .dark {
@@ -68,6 +70,9 @@ body {
 }
 
 .gradient-bg {
+  /* background: rgb(224,186,135); */
+  /* background: linear-gradient(0deg, #fff4e6 0%, #f0d1aa 100%); */
+  /* background: #e6ded6 ; */
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
