@@ -71,7 +71,7 @@ export default function About() {
                 alt={role} 
                 className="rounded-full mb-4"
               />
-              <h3 className="text-lg font-semibold mb-1">John Doe</h3>
+              <h3 className="text-lg font-semibold mb-1">Sanjay Patel</h3>
               <p className="text-gray-600">{role}</p>
             </CardContent>
           </Card>

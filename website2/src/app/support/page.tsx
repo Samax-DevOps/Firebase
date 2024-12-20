@@ -61,7 +61,7 @@ export default function Support() {
         </Card>
       </div>
 
-      <h2 className="text-2xl font-semibold mb-8 text-center">Frequently Asked Questions</h2>
+      <h2 id="faq" className="text-2xl font-semibold mb-8 text-center pt-16">Frequently Asked Questions</h2>
       <div className="space-y-4">
         {[
           'How do I place an order?',

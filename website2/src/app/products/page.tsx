@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 const products = [
-  { name: 'Guide Rails', description: 'Precision-engineered for smooth operation', image: '/placeholder.svg?height=200&width=300', link: '/products/guide-rails' },
-  { name: 'Elevator Machines', description: 'Powerful and efficient elevator motors', image: '/placeholder.svg?height=200&width=300', link: '/products/machines' },
-  { name: 'Control Chips', description: 'Advanced technology for smart elevators', image: '/placeholder.svg?height=200&width=300', link: '/products/chips' },
-  { name: 'Elevator Ropes', description: 'High-strength ropes for reliable performance', image: '/placeholder.svg?height=200&width=300', link: '/products/guide-rails' },
-  { name: 'Safety Gears', description: 'Ensuring passenger safety in all situations', image: '/placeholder.svg?height=200&width=300', link: '/products/guide-rails' },
-  { name: 'Door Systems', description: 'Smooth and secure elevator entrances', image: '/placeholder.svg?height=200&width=300', link: '/products/guide-rails' },
+  { name: 'Guide Rails', description: 'Precision-engineered for smooth operation', image: '/images/rail.png', link: '/products/guide-rails' },
+  { name: 'Elevator Machines', description: 'Powerful and efficient elevator motors', image: '/images/2.png', link: '/products/machines' },
+  { name: 'Control Chips', description: 'Advanced technology for smart elevators', image: '/images/chip.png', link: '/products/chips' },
+  { name: 'Elevator Ropes', description: 'High-strength ropes for reliable performance', image: '/images/rope.png', link: '/products/guide-rails' },
+  { name: 'Safety Gears', description: 'Ensuring passenger safety in all situations', image: '/images/Safety.png', link: '/products/guide-rails' },
+  { name: 'Door Systems', description: 'Smooth and secure elevator entrances', image: '/images/door.png', link: '/products/guide-rails' },
 ]
 
 export default function Products() {
@@ -24,9 +24,9 @@ export default function Products() {
               <CardTitle>{product.name}</CardTitle>
               <CardDescription>{product.description}</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex justify-centre items-center">
               <Link href={product.link}>
-                <Image src={product.image} width={300} height={200} alt={product.name} className="rounded-lg" />
+                <Image src={product.image} width={300} height={200} alt={product.name} className="rounded-lg w-80 h-72" />
               </Link>
             </CardContent>
             <CardFooter>

@@ -11,7 +11,7 @@ export default function Home() {
     {
       title: "Guide Rails",
       description: "Precision-engineered for smooth operation",
-      image: { src: "/images/g.png", width: 250, height: 200, alt: "Guide Rails" },
+      image: { src: "/images/rail.png", width: 250, height: 200, alt: "Guide Rails" },
       link: "/products/guide-rails",
     },
     {
@@ -23,7 +23,7 @@ export default function Home() {
     {
       title: "Control Chips",
       description: "Advanced technology for smart elevators",
-      image: { src: "/images/g.png", width: 250, height: 200, alt: "Control Chips" },
+      image: { src: "/images/chip.png", width: 250, height: 200, alt: "Control Chips" },
       link: "/products/chips",
     },
   ];
@@ -123,13 +123,13 @@ export default function Home() {
             <Card>
               <CardContent className="pt-6">
                 <p className="italic mb-4">"Samax Engineering has consistently delivered top-notch elevator components. Their guide rails have significantly improved the performance of our elevators."</p>
-                <p className="font-semibold">- John Doe, Chief Engineer at SkyScraper Co.</p>
+                <p className="font-semibold">- Sam Patel, Chief Engineer at SkyScraper Co.</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-6">
                 <p className="italic mb-4">"The control chips from Samax have revolutionized our smart elevator systems. We couldn't be happier with the results."</p>
-                <p className="font-semibold">- Jane Smith, CTO at Elevatetech</p>
+                <p className="font-semibold">- Rekha Patel, CTO at Elevatetech</p>
               </CardContent>
             </Card>
           </div>
