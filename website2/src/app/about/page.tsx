@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function About() {
   return (
-    <div className="container mx-auto px-6 py-16">
+    <div className="container mx-auto px-6 py-16 ">
       <h1 className="text-4xl font-bold mb-8 text-center">About Samax Engineering</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -19,10 +19,16 @@ export default function About() {
             behind our success. We continually strive to push the boundaries of what's possible in 
             elevator technology.
           </p>
+          <p>
+            Our commitment to quality, innovation, and customer satisfaction has been the driving force 
+            behind our success. We continually strive to push the boundaries of what's possible in 
+            elevator technology. We continually strive to push the boundaries of what's possible in 
+            elevator technology.  
+          </p>
         </div>
         <div className="flex justify-center items-center">
           <Image 
-            src="/placeholder.svg?height=300&width=400" 
+            src="/images/clear.png" 
             width={400} 
             height={300} 
             alt="Samax Engineering Headquarters" 

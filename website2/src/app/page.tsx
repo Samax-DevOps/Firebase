@@ -23,7 +23,7 @@ export default function Home() {
     {
       title: "Control Chips",
       description: "Advanced technology for smart elevators",
-      image: { src: "/images/guide-rail.png", width: 250, height: 200, alt: "Control Chips" },
+      image: { src: "/images/g.png", width: 250, height: 200, alt: "Control Chips" },
       link: "/products/chips",
     },
   ];
@@ -31,9 +31,9 @@ export default function Home() {
   return (
     <div className="gradient-bg min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[650px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[900px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/3.png"
+          src="/images/back.png"
           alt="Elevator Background"
           fill
           style={{ objectFit: 'fill' }}
@@ -44,8 +44,9 @@ export default function Home() {
         <div className="relative z-10 text-center text-white">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Elevating Your Elevator Solutions</h1>
           <p className="text-xl mb-8">Premium elevator components for seamless vertical transportation</p>
-          <Button asChild>
-            <Link href="/products" className="bg-white text-black hover:bg-gray-200">
+          <Button asChild className="bg-buttonf text-primary-foreground px-4 py-2 rounded">
+        
+            <Link href="/products">
               Explore Our Products <ArrowRight className="ml-2" />
             </Link>
           </Button>
@@ -55,7 +56,7 @@ export default function Home() {
       {/* Featured Products */}
       <section className="container mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Featured Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 lg:gap-11">
 
           {cards.map((card, index) => (
             <Card key={index}>
@@ -64,17 +65,19 @@ export default function Home() {
                 <CardDescription>{card.description}</CardDescription>
               </CardHeader>
               <CardContent className="justify-items-center">
-                <Image
-                  src={card.image.src}
-                  width={card.image.width}
-                  height={card.image.height}
-                  alt={card.image.alt}
-                  className="rounded-lg w-80 h-72"
-                />
+                <Link href={card.link}>
+                  <Image
+                    src={card.image.src}
+                    width={card.image.width}
+                    height={card.image.height}
+                    alt={card.image.alt}
+                    className="rounded-lg w-80 h-72"
+                  />
+                </Link>
               </CardContent>
               <CardFooter>
                 <Button asChild>
-                  <Link href={card.link}>Learn More</Link>
+                  <Link href={card.link} className="bg-primary text-primary-foreground hover:bg-gray-500 px-4 py-2 rounded">Learn More</Link>
                 </Button>
               </CardFooter>
             </Card>

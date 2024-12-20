@@ -30,7 +30,7 @@ export default function GuideRails() {
         </div>
         <div className="flex justify-center items-center">
           <Image 
-            src="/placeholder.svg?height=400&width=600&text=Guide+Rails" 
+            src="/images/clear.png" 
             width={600} 
             height={400} 
             alt="Samax Engineering Guide Rails" 
