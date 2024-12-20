@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-8">
-        <div className="flex flex-wrap">
-          <div className="w-full md:w-1/4 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="text-center md:text-left">
             <h5 className="uppercase mb-6 font-bold">Company</h5>
             <ul className="mb-4">
               <li className="mt-2">
@@ -20,7 +20,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/4 text-center md:text-left">
+          <div className="text-center md:text-left">
             <h5 className="uppercase mb-6 font-bold">Products</h5>
             <ul className="mb-4">
               <li className="mt-2">
@@ -34,7 +34,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/4 text-center md:text-left">
+          <div className="text-center md:text-left">
             <h5 className="uppercase mb-6 font-bold">Support</h5>
             <ul className="mb-4">
               <li className="mt-2">
@@ -48,7 +48,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/4 text-center md:text-left">
+          <div className="text-center md:text-left">
             <h5 className="uppercase mb-6 font-bold">Social</h5>
             <ul className="mb-4 flex justify-center md:justify-start">
               <li className="mr-4">

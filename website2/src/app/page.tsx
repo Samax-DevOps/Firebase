@@ -56,7 +56,7 @@ export default function Home() {
       {/* Featured Products */}
       <section className="container mx-auto px-6 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Featured Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 lg:gap-11">
 
           {cards.map((card, index) => (
             <Card key={index}>
@@ -65,13 +65,15 @@ export default function Home() {
                 <CardDescription>{card.description}</CardDescription>
               </CardHeader>
               <CardContent className="justify-items-center">
-                <Image
-                  src={card.image.src}
-                  width={card.image.width}
-                  height={card.image.height}
-                  alt={card.image.alt}
-                  className="rounded-lg w-80 h-72"
-                />
+                <Link href={card.link}>
+                  <Image
+                    src={card.image.src}
+                    width={card.image.width}
+                    height={card.image.height}
+                    alt={card.image.alt}
+                    className="rounded-lg w-80 h-72"
+                  />
+                </Link>
               </CardContent>
               <CardFooter>
                 <Button asChild>
