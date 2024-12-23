@@ -43,14 +43,14 @@ export default function Header() {
               </Link>
             ))}
           </div>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild className='md:hidden'>
+              <Button variant="ghost" size="icon" className="md:hidden">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" side="right" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
                 <SheetTitle>Menu</SheetTitle>
                 <SheetDescription>
