@@ -41,7 +41,7 @@ export default function Footer() {
                 <Link href="/support" className="hover:underline">Help Center</Link>
               </li>
               <li className="mt-2">
-                <Link href="/faq" className="hover:underline">FAQ</Link>
+                <Link href="/support#faq" className="hover:underline">FAQ</Link>
               </li>
               <li className="mt-2">
                 <Link href="/documentation" className="hover:underline">Documentation</Link>
