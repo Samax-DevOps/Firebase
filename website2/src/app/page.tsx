@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Featured Products</h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 lg:gap-11">
 
@@ -64,7 +64,7 @@ export default function Home() {
                 <CardTitle>{card.title}</CardTitle>
                 <CardDescription>{card.description}</CardDescription>
               </CardHeader>
-              <CardContent className="justify-items-center">
+              <CardContent className="flex justify-center items-center p-4">
                 <Link href={card.link}>
                   <Image
                     src={card.image.src}
@@ -110,9 +110,11 @@ export default function Home() {
       </section>
 
       {/* Live Exchange Rate */}
-      <section className="container mx-auto px-6 py-16">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Live USD to INR Exchange Rate</h2>
-        <ExchangeRateChart />
+        <div className="max-w-4xl mx-auto">
+          <ExchangeRateChart />
+        </div>
       </section>
 
       {/* Testimonials */}

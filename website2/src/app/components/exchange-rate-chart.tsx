@@ -41,12 +41,12 @@ export default function ExchangeRateChart() {
   }, [])
 
   return (
-    <Card className="w-full">
+    <Card className="w-full overflow-hidden">
       <CardHeader>
-        <CardTitle>USD to INR Exchange Rate</CardTitle>
+        <CardTitle className="text-lg sm:text-xl md:text-2xl">USD to INR Exchange Rate</CardTitle>
         <CardDescription>Last 7 days</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="p-0">
         <ChartContainer
           config={{
             rate: {
@@ -54,15 +54,26 @@ export default function ExchangeRateChart() {
               color: "hsl(var(--chart-1))",
             },
           }}
-          className="h-[300px]"
+          className="h-[300px] w-full"
         >
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <LineChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 10 }}>
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="date" />
-              <YAxis />
+              <XAxis 
+                dataKey="date" 
+                tick={{ fontSize: 12 }}
+                tickFormatter={(value) => {
+                  const date = new Date(value);
+                  return `${date.getMonth() + 1}/${date.getDate()}`;
+                }}
+              />
+              <YAxis 
+                tick={{ fontSize: 12 }}
+                width={50}
+                tickFormatter={(value) => value.toFixed(2)}
+              />
               <ChartTooltip content={<ChartTooltipContent />} />
-              <Legend />
+              <Legend wrapperStyle={{ fontSize: '12px', marginTop: '10px' }} />
               <Line type="monotone" dataKey="rate" stroke="var(--color-rate)" name="Exchange Rate" />
             </LineChart>
           </ResponsiveContainer>
