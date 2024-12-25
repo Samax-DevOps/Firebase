@@ -31,7 +31,7 @@ export default function Machines() {
         </div>
         <div className="flex justify-center items-center">
           <Image 
-            src="/placeholder.svg?height=400&width=600&text=Elevator+Machine" 
+            src="/images/2.png" 
             width={600} 
             height={400} 
             alt="Samax Engineering Elevator Machine" 
