@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
@@ -5,7 +7,39 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ArrowRight, Shield, Zap, BarChart } from 'lucide-react'
 import ExchangeRateChart from './components/exchange-rate-chart'
 
+import { useEffect } from "react";
+import { initializeApp } from "firebase/app";
+import { getAnalytics, isSupported } from "firebase/analytics";
+
+
+
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const firebaseConfig = {
+        apiKey: "AIzaSyBJHSYj4AEb5h4rwVxHGp3Ibcp5VRHBJM8",
+        authDomain: "samax-engineering.firebaseapp.com",
+        projectId: "samax-engineering",
+        storageBucket: "samax-engineering.firebasestorage.app",
+        messagingSenderId: "411901236057",
+        appId: "1:411901236057:web:52dfb6197261af0b5e7248",
+        measurementId: "G-KQY39BVD3G",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      // Check if analytics is supported
+      isSupported().then((supported) => {
+        if (supported) {
+          const analytics = getAnalytics(app);
+          console.log("Firebase Analytics initialized.");
+        } else {
+          console.log("Firebase Analytics is not supported in this environment.");
+        }
+      });
+    }
+  }, []);
 
   const cards = [
     {
